@@ -164,7 +164,9 @@ echo ">>> nano"
     CFLAGS="-Os" CPPFLAGS="-I$PREFIX/include" LDFLAGS="$LDFLAGS" \
     NCURSESW_CFLAGS="-I$PREFIX/include -I$PREFIX/include/ncursesw" \
     NCURSESW_LIBS="-L$PREFIX/lib -lncursesw -ltinfow"
-  "$MAKE" -j"$JOBS"
+  # only the program, as the docs need makeinfo, which macOS lacks; their man pages are in the tree
+  "$MAKE" -j"$JOBS" -C lib
+  "$MAKE" -j"$JOBS" -C src
   rm -rf "$DIST"
   mkdir -p "$DIST/bin" "$DIST/share/man/man1" "$DIST/share/man/man5" "$DIST/share/nano"
   cp src/nano "$DIST/bin/nano"
