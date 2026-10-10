@@ -1,0 +1,12 @@
+[submodule "vendor/nano"]
+    path = vendor/nano
+    url = https://git.savannah.gnu.org/git/nano.git
+    shallow = true
+[submodule "vendor/ncurses"]
+    path = vendor/ncurses
+    url = https://github.com/ThomasDickey/ncurses-snapshots.git
+    shallow = true
+[submodule "vendor/gnulib"]
+    path = vendor/gnulib
+    url = https://github.com/coreutils/gnulib.git
+    shallow = true

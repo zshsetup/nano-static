@@ -1,0 +1,28 @@
+The code in this repository (build.sh, tests/, README.md) is licensed under the MIT License;
+see LICENSE.
+
+The nano binaries produced by build.sh and published under GitHub Releases embed the following
+third-party projects, vendored unmodified as git submodules under vendor/ at their release tags
+(gnulib at the commit that nano pins). Each keeps its own license, and the combined binaries are
+governed by the union of these licenses, not by the MIT License above.
+
+GNU nano
+  https://www.nano-editor.org/
+  Copyright (c) Free Software Foundation, Inc., Chris Allegretta, and contributors
+  License: GNU General Public License v3.0 or later (GPL-3.0-or-later)
+
+GNU gnulib (portability modules compiled into nano)
+  https://www.gnu.org/software/gnulib/
+  Copyright (c) Free Software Foundation, Inc.
+  License: mostly GNU Lesser General Public License v2.1 or later; the modules nano imports are
+  licensed as noted in their file headers
+
+ncurses
+  https://invisible-island.net/ncurses/
+  Copyright (c) Thomas E. Dickey and Free Software Foundation, Inc.
+  License: X11 License (MIT-style)
+
+Because nano is GPL-3.0-or-later, anyone who redistributes these binaries (including the release
+archives from this repo) must satisfy the GPL, such as making the corresponding source available and
+keeping the GPL notice attached. The release workflow attaches the exact vendored sources used for
+the build (nano-static-sources.tar.gz) to every release for this purpose.
