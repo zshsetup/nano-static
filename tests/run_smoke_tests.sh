@@ -38,8 +38,9 @@ version="$("$NANO" --version | head -n 1)"
 echo "$version" | grep -q '^ GNU nano, version ' || fail "nano --version: $version"
 pass "$version"
 
-# edits a file (with python3 at hand) in a pseudo terminal with no terminfo database reachable, so nano must draw with the
-# entries compiled into ncurses: types a line, saves with ^O, confirms with Enter, quits with ^X.
+# edits a file (with python3 at hand) in a pseudo terminal with no terminfo database reachable, so
+# nano must draw with the entries compiled into ncurses: types a line, saves with ^O, confirms
+# with Enter, quits with ^X.
 if command -v python3 >/dev/null; then
 python3 - "$NANO" "$TMP/out.txt" <<'PY' || fail "editing a file"
 import os, pty, sys, time
