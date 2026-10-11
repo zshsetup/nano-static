@@ -2,7 +2,7 @@
 _commit: e730ed7
 _src_path: gh:audivir/copier-template
 description: Static build of GNU nano with ncurses linked in
-github_org: audivir
+github_org: zshsetup
 project_name: nano-static
 project_slug: nano_static
 project_type: shell

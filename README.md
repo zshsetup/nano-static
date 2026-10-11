@@ -29,7 +29,7 @@ need more libraries.
 Clone the repo with submodules (shallow, the history of the vendored projects is not needed):
 
 ```shell
-git clone --recurse-submodules --shallow-submodules https://github.com/audivir/nano-static
+git clone --recurse-submodules --shallow-submodules https://github.com/zshsetup/nano-static
 cd nano-static
 ```
 
